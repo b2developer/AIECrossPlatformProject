@@ -26,10 +26,10 @@ public class GameIntro : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        //mover.Goto(launcherFocus.position, launcherFocus.position, 3.0f, null); //wait 3 seconds
-        //mover.Goto(launcherFocus.position, enemyFocus.position, 2.0f, null); //goto enemy focus in 2 seconds
-        //mover.Goto(enemyFocus.position, enemyFocus.position, 2.0f, null); //wait 2 seconds
-        //mover.Goto(enemyFocus.position, launcherFocus.position, 2.0f, null); //goto launcher focus in 2 seconds
+        mover.Goto(launcherFocus.position, launcherFocus.position, 3.0f, null); //wait 3 seconds
+        mover.Goto(launcherFocus.position, enemyFocus.position, 2.0f, null); //goto enemy focus in 2 seconds
+        mover.Goto(enemyFocus.position, enemyFocus.position, 2.0f, null); //wait 2 seconds
+        mover.Goto(enemyFocus.position, launcherFocus.position, 2.0f, null); //goto launcher focus in 2 seconds
     }
 	
 
