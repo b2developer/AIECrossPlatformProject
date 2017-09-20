@@ -76,6 +76,9 @@ public class CameraMovement : MonoBehaviour
     //boolean flag that dictates whether the camera can take user input or not
     public bool takesInput = false;
 
+    //reference to the input channel that the camera belongs to
+    public InputChannel channel;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -150,13 +153,21 @@ public class CameraMovement : MonoBehaviour
                 packetTimer = 0.0f;
             }
         }
-       
+
 
         if (takesInput)
         {
-            if (CustomInput.fire == ButtonState.PRESSED)
+            if (channel.button1 == ButtonState.PRESSED && CustomInput.platform == PlatformType.STANDALONE_WIN)
             {
-                transform.position -= (Vector3)CustomInput.movement;
+                transform.position -= (Vector3)channel.movement;
+                packets.Clear();
+                packetTimer = 0.0f;
+            }
+            else if ((channel.movement.magnitude > 0.0f && (CustomInput.platform == PlatformType.XBOX_ONE || CustomInput.platform == PlatformType.PS4)))
+            {
+                transform.position += (Vector3)channel.movement;
+                packets.Clear();
+                packetTimer = 0.0f;
             }
         }
 
