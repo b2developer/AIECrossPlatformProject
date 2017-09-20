@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6858abb4516aae344881bf286b3aac33
+guid: f8b0b46c03c510b43936e5b939b360e2
 TextureImporter:
   fileIDToRecycleName:
     21300000: SF Window
@@ -11,6 +11,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -20,16 +22,19 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 4096
   textureSettings:
+    serializedVersion: 2
     filterMode: 2
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -120,8 +125,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 170, y: 90, z: 170, w: 100}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: SF
   userData: 
   assetBundleName: 
